@@ -32,6 +32,9 @@ namespace EntityDbContext.Controllers
 
         public IActionResult Create()
         {
+               var _emplst = (from i in _dbContext.EMPLOYEE 
+                                select i).ToList();  
+            
          
             return View();
         }
